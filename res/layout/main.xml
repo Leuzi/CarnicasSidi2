@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/introbackground"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondointro"
+    android:weightSum="10" >
+
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+    	android:layout_weight="4.4"
+	    android:padding="6dip">
+        <Button
+            android:id="@+id/backupButton"
+            android:layout_alignParentRight="true" 
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"          
+            android:text="@string/backup"
+            android:background="@drawable/graybutton"
+            style="@style/ButtonText2"
+        />
+     </RelativeLayout>
+	
+	
+	<LinearLayout
+	    android:id="@+id/introcentral"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:layout_weight="1.2"
+	    android:baselineAligned="false">
+	    
+		<LinearLayout
+		    android:id="@+id/letfcentral"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:layout_weight="1.1">	    
+		</LinearLayout>
+
+        <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_weight="0.3">
+        
+        	<TableRow
+        		android:layout_width="fill_parent"
+        		android:layout_height="fill_parent"
+        		android:layout_weight="1"
+        		android:orientation="horizontal">
+        	    
+	        	    <LinearLayout 
+	        	    android:layout_width="fill_parent"
+	        		android:layout_height="fill_parent"
+	        		android:layout_weight="1"
+	        		android:gravity="center">
+	        		
+	        	        <Button
+	        	            android:id="@+id/clientsButton"
+	        	            android:layout_width="250dip"
+	        	            android:layout_height="150dip"
+	        	            android:text="@string/clients"
+	        	            android:layout_gravity="center"
+	        	            android:background="@drawable/graybutton"
+           					style="@style/ButtonText"
+           					android:drawableLeft="@drawable/people"
+	        	        	/>
+	        	        
+	        	    </LinearLayout>
+	        	    <LinearLayout
+	        	    android:layout_width="fill_parent"
+	        		android:layout_height="fill_parent"
+	        		android:layout_weight="1"
+	        		android:gravity="center">
+	        	        <Button
+	        	            android:id="@+id/productsButton"
+	        	            android:layout_width="250dip"
+	        	            android:layout_height="150dip"
+	        	            android:layout_gravity="center"
+	        	            android:background="@drawable/graybutton"
+           					style="@style/ButtonText"
+           					android:drawableLeft="@drawable/products"
+	        	            android:text="@string/products"/>
+	        	    </LinearLayout>
+        	</TableRow>
+        	<TableRow
+        	    android:layout_width="fill_parent"
+        		android:layout_height="fill_parent"
+        		android:layout_weight="1"
+        		>
+        	    <LinearLayout 
+	        	    android:layout_width="fill_parent"
+	        		android:layout_height="fill_parent"
+	        		android:layout_weight="1"
+	        		android:gravity="center">
+	        		
+	        	        <Button
+	        	            android:id="@+id/diaryButton"
+	        	            android:layout_width="250dip"
+	        	            android:layout_height="150dip"
+	        	            android:layout_gravity="center"
+	        	            android:background="@drawable/graybutton"
+	        	            android:drawableLeft="@drawable/bill"
+           					style="@style/ButtonText"
+	        	            android:text="@string/diarybill"/>
+	        	        
+	        	    </LinearLayout>
+	        	    <LinearLayout
+	        	    android:layout_width="fill_parent"
+	        		android:layout_height="fill_parent"
+	        		android:layout_weight="1"
+	        		android:gravity="center">
+	        	        <Button
+	        	            android:id="@+id/anualButton"
+	        	            android:layout_width="250dip"
+	        	            android:layout_height="150dip"
+	        	            android:layout_gravity="center"
+	        	            android:background="@drawable/graybutton"
+	        	            android:drawableLeft="@drawable/accountability"
+           					style="@style/ButtonText"
+	        	            android:text="@string/anualbill"/>
+	        	    </LinearLayout>
+        	</TableRow>
+        </TableLayout>
+		    	    
+		<LinearLayout
+		    android:id="@+id/rightcentral"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:layout_weight="1.1">	    
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/introbelow"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:layout_weight="4.4">
+	    
+		    <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center"
+		    android:gravity="center"
+		    style="@style/LicenseFont"
+		    android:text="@string/license"
+		    />
+	</LinearLayout>
+    
+    
+</LinearLayout>

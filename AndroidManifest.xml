@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ali.software"
+    android:versionCode="2"
+    android:versionName="2.0"
+    >
+    
+    
+    <uses-permission 
+	    android:name="android.Manifest.permission.ACCESS_CHECKIN_PROPERTIES"
+	    />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="12"/>
+
+
+    <uses-configuration
+        android:reqHardKeyboard="true"
+        android:reqTouchScreen="finger"/>
+        
+ 	<uses-feature
+ 	    android:name="android.hardware.screen.landscape"/>
+
+ 	    
+
+    <application
+        android:name="ali.clases.GlobalStatic"
+        android:debuggable="true"
+        android:theme="@android:style/Theme"
+        android:icon="@drawable/ic_launcher" android:logo="@drawable/ic_launcher">
+        <activity
+            android:name=".AliActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".Clients"
+            android:label="@string/clients"
+            android:screenOrientation="landscape">
+            
+         	<intent-filter>
+         	    <action android:name="android.intent.action.VIEW"></action>
+         	</intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".Products"
+            android:label="@string/products"
+            android:screenOrientation="landscape"
+            ></activity>
+        	<intent-filter>
+         	    <action android:name="android.intent.action.VIEW"></action>
+         	</intent-filter>
+         
+        <activity
+            android:name=".ClientsForm"
+        	android:label="@string/newClient"
+        	android:screenOrientation="landscape"
+        	android:windowSoftInputMode="stateHidden">	
+            
+            <intent-filter>
+         	    <action android:name="android.intent.action.VIEW"></action>
+         	    <action android:name="android.intent.action.INSERT_OR_EDIT"/>
+         	</intent-filter>
+        </activity>
+        <activity
+            android:name=".ProductForm"
+        	android:label="@string/newProduct"
+        	android:screenOrientation="landscape"
+        	android:windowSoftInputMode="stateHidden">	
+            
+            <intent-filter>
+         	    <action android:name="android.intent.action.VIEW"></action>
+         	    <action android:name="android.intent.action.INSERT_OR_EDIT"/>
+         	</intent-filter>
+        </activity>
+        <activity
+            android:name=".DiarySelection"
+        	android:label="@string/diarySelection"
+        	android:screenOrientation="landscape">	
+            
+            <intent-filter>
+         	    <action android:name="android.intent.action.VIEW"></action>
+         	    <action android:name="android.intent.action.INSERT_OR_EDIT"/>
+         	</intent-filter>
+        </activity>
+        <activity
+            android:name=".BillForm"
+        	android:label="@string/billForm"
+        	android:screenOrientation="landscape"
+        	>	
+            
+            <intent-filter>
+         	    <action android:name="android.intent.action.VIEW"></action>
+         	    <action android:name="android.intent.action.INSERT_OR_EDIT"/>
+         	</intent-filter>
+        </activity>
+        <activity 
+            android:name=".AnualDateSelection"
+            android:label="@string/anualForm"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name=".ModifyPrizes"
+            android:label="@string/modifyPrizes"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.INSERT_OR_EDIT"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name=".FinalizeBill"
+            android:label="@string/finalizeBill"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+            
+        </activity>
+        
+    </application>
+    
+</manifest>

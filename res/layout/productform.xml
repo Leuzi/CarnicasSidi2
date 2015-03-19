@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondocreacion" >
+    
+<RelativeLayout
+	    android:id="@+id/introabove"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:layout_weight="4.4">
+
+    	<Button
+    	    android:id="@+id/eraseButton"
+    	    android:layout_width="100dip"
+    	    android:layout_height="50dip"
+    	    android:layout_alignParentRight="true"
+    	    android:layout_centerVertical="true"
+    	    android:layout_marginRight="161dp"    	    		    
+		    android:background="@drawable/graybutton"
+           	style="@style/ButtonText2"
+    	    android:text="@string/erase" />
+    
+	</RelativeLayout>
+	
+	<LinearLayout
+	    android:id="@+id/introcentral"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:layout_weight="1.2"
+	    android:baselineAligned="false">
+	    
+		<LinearLayout
+		    android:id="@+id/letfcentral"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:layout_weight="1.1">	    
+		</LinearLayout>
+
+		<RelativeLayout
+		    android:id="@+id/central"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.3"
+		    android:orientation="horizontal"
+		    android:paddingLeft="50dip"
+		    android:paddingRight="50dip"
+		    android:paddingTop="50dip" >
+
+		    <TextView
+		        android:id="@+id/labelName"
+		        style="@style/FormFont"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/editName"
+		        android:layout_marginRight="14dip"
+		        android:text="@string/name"
+		        />
+
+		    <EditText
+		        android:id="@id/editName"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_toRightOf="@id/labelName"
+		        android:imeOptions="flagNoExtractUi"
+		        android:inputType="text"
+		        android:maxLength="20"/>
+
+		    <TextView
+		        android:id="@+id/labelDetail"
+		        style="@style/FormFont"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/editDetail"
+		        android:layout_below="@id/labelName"
+		        android:text="@string/detail"
+		        />
+
+		    <EditText
+		        android:id="@id/editDetail"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@id/editName"
+		        android:layout_below="@id/editName"
+		        android:layout_marginTop="14dip"
+		        android:layout_toRightOf="@id/labelDetail"
+		        android:imeOptions="flagNoExtractUi"
+		        android:inputType="text"
+		        android:maxLength="30"
+		        />
+
+		    <TextView
+		        android:id="@+id/labelPrize"
+		        style="@style/FormFont"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/editPrize"
+		        android:layout_below="@id/labelDetail"
+		        android:layout_marginRight="14dip"
+		        android:text="@string/prize" />
+
+		    <EditText
+		        android:id="@id/editPrize"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@id/editName"
+		        android:layout_below="@id/editDetail"
+		        android:layout_marginTop="14dip"
+		        android:layout_toRightOf="@id/labelPrize"
+		        android:inputType="number"
+		        android:imeOptions="flagNoExtractUi"
+		        android:digits="0123456789.\n"
+		        android:singleLine="true"
+
+		        
+		        />
+
+		    <CheckBox
+		        android:id="@+id/checkUnitsProduct"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/labelUnits"
+		        android:layout_toRightOf="@id/labelUnits"
+		        android:layout_marginLeft="24dp" />
+
+		    <Button
+		        android:id="@+id/backButton"
+		        android:layout_width="200dip"
+		        android:layout_height="100dip"
+		        android:layout_alignParentBottom="true"
+		        android:layout_marginBottom="14dip"
+		        android:text="@string/back"		        		    
+			    android:background="@drawable/graybutton"
+	           	style="@style/ButtonText2"
+		        android:textSize="22dip" />
+
+		    <Button
+		        android:id="@+id/acceptButton"
+		        android:layout_width="200dip"
+		        android:layout_height="100dip"
+		        android:layout_alignParentBottom="true"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginBottom="14dip"
+		        android:text="@string/accept"		    
+			    android:background="@drawable/graybutton"
+	           	style="@style/ButtonText2"
+		        android:textSize="22dip" />
+
+		    <TextView
+		        android:id="@id/labelUnits"
+		        style="@style/FormFont"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/labelPrize"
+		        android:layout_below="@id/editPrize"
+		        android:text="@string/units" />
+		</RelativeLayout>
+
+		<LinearLayout
+		    android:id="@+id/rightcentral"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:layout_weight="1.1">	    
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/introbelow"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:layout_weight="4.4">
+	</LinearLayout>    
+    
+</LinearLayout>

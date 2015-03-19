@@ -1,0 +1,18 @@
+PRAGMA foreign_keys=ON;
+	
+
+CREATE TABLE clientes (idClientes INTEGER  INTEGER PRIMARY KEY,Nombre TEXT DEFAULT NULL,Detalle TEXT DEFAULT NULL,Direccion TEXT DEFAULT NULL,CIF TEXT DEFAULT NULL,Ciudad TEXT DEFAULT Melilla,Pais TEXT DEFAULT España,CP INTEGER DEFAULT NULL,UNIQUE(Nombre));
+	
+CREATE TABLE productos (idProductos INTEGER PRIMARY KEY,Nombre TEXT DEFAULT NULL,Detalle TEXT DEFAULT NULL,Precio REAL DEFAULT NULL,Unidades INTEGER DEFAULT NULL,UNIQUE(Nombre));
+    
+CREATE TABLE facturas (idFacturas INTEGER PRIMARY KEY,Fecha TEXT NOT NULL,Observaciones TEXT DEFAULT NULL,Estado INTEGER DEFAULT NULL);
+    
+CREATE TABLE posee(idCliente INTEGER NOT NULL,idFactura INTEGER NOT NULL,PRIMARY KEY (idCliente,idFactura),FOREIGN KEY (idCliente) REFERENCES clientes(idCliente),FOREIGN KEY (idFactura) REFERENCES factura(idFactura));
+    		
+ 		
+CREATE TABLE contiene (idFacturas INTEGER NOT NULL,idProductos INTEGER NOT NULL,Cantidad REAL NOT NULL,Precio REAL NOT NULL,Descuento REAL NOT NULL,PRIMARY KEY (idFacturas,idProductos),FOREIGN KEY (idFacturas) REFERENCES facturas(idFacturas),FOREIGN KEY (idProductos) REFERENCES productos (idProductos));
+
+CREATE TABLE propio (idClientes INTEGER,idProductos INTEGER, precio REAL, PRIMARY KEY (idClientes,idProductos), FOREIGN KEY(idClientes) REFERENCES clientes(idClientes), FOREIGN KEY(idProductos) REFERENCES productos(idProductos));
+    
+    
+SELECT idFactura,Fecha,Observaciones,Estado FROM facturas AS F INNER JOIN(SELECT idFactura FROM posee WHERE idCliente=?)AS  P ON F.idFacturas=P.idFactura;

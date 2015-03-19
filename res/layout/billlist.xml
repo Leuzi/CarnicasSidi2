@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondoseleccion" >
+
+	<RelativeLayout
+	    android:id="@+id/introabove"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="4.4"
+	    android:orientation="horizontal" >
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/billList"
+			android:layout_centerVertical="true"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#000000"
+	        android:textSize="40sp"/>
+
+	    <Button
+	        android:id="@+id/eraseButton"
+	        style="@style/ButtonText2"
+	        android:layout_width="120dip"
+	        android:layout_height="70dip"
+	        android:layout_alignBaseline="@+id/newButton"
+	        android:layout_alignBottom="@+id/newButton"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="161dp"
+	        android:background="@drawable/graybutton"
+	        android:text="@string/eraseBill" />
+
+	    <Button
+	        android:id="@+id/newButton"
+	        style="@style/ButtonText2"
+	        android:layout_width="120dip"
+	        android:layout_height="70dip"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="154dp"
+	        android:background="@drawable/graybutton"
+	        android:text="@string/newBill" />
+
+	</RelativeLayout>
+	
+	<LinearLayout
+	    android:id="@+id/introcentral"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:layout_weight="1.2"
+	    android:baselineAligned="false">
+	    
+		<LinearLayout
+		    android:id="@+id/letfcentral"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"		    
+		    android:layout_weight="1.1">	    
+		</LinearLayout>
+	    
+		<LinearLayout
+		    android:layout_height="fill_parent"
+	        android:layout_width="fill_parent"
+	        android:layout_weight="0.3"
+	        android:orientation="vertical">
+     	    <TableRow
+	             android:layout_width="fill_parent"
+	             android:layout_height="wrap_content"
+	             android:id="@+id/headtable"	                
+	             android:background="@drawable/headcell"             		            
+	             android:layout_marginLeft="8dip"
+	             android:layout_marginRight="11dip"
+	             android:layout_marginTop="6dip"
+	             android:orientation="horizontal"
+	             android:stretchColumns="*" >
+	       
+             
+	                <TextView
+	                    android:text="@string/client"
+	                    android:layout_width="280dip"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center"
+	                    android:textSize="20sp"
+	                    android:textColor="#000000"/>
+	                <TextView 
+	                    android:text="@string/billNumber"
+	                    android:layout_width="225dip"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center"
+	                    android:textSize="20sp"
+	                    android:textColor="#000000"/>
+	                <TextView 
+	                    android:text="@string/date"
+	                    android:layout_width="225dip"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center"
+	                    android:textSize="20sp"
+	                    android:textColor="#000000"/>
+	                <TextView 
+	                    android:text="@string/review"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center"
+	                    android:textSize="20sp"
+	                    android:textColor="#000000"/>
+	                
+	            </TableRow>
+		    <ScrollView
+		    	android:layout_height="fill_parent"
+	        	android:layout_width="fill_parent"
+	        	android:layout_marginBottom="12dip">
+				
+		        <TableLayout
+		            android:id="@+id/tableBill"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="10dip"
+		            android:layout_marginRight="12dip"
+		            android:layout_marginTop="7dip"
+		            android:orientation="horizontal"
+		            android:stretchColumns="*"
+		         >
+		        </TableLayout>
+		    </ScrollView>    		
+		    
+		</LinearLayout>			    	    
+		
+		<LinearLayout
+		    android:id="@+id/rightcentral"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:layout_weight="1.1">	    
+		</LinearLayout>
+	</LinearLayout>
+
+	<RelativeLayout
+	    android:id="@+id/introbelow"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="4.4"
+	    android:orientation="vertical" >
+
+	    <Button
+	        android:id="@+id/backButton"
+	        android:layout_width="120dip"
+	        android:layout_height="60dip"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="155dp"		    
+		    android:background="@drawable/graybutton"
+           	style="@style/ButtonText2"
+	        android:text="@string/back" />
+
+	    <Button
+	        android:id="@+id/printButton"
+	        android:layout_width="120dip"
+	        android:layout_height="60dip"
+	        android:layout_alignBaseline="@+id/backButton"
+	        android:layout_alignBottom="@+id/backButton"
+	        android:layout_centerHorizontal="true"		    
+		    android:background="@drawable/graybutton"
+           	style="@style/ButtonText2"
+	        android:text="@string/print" />
+
+	    <Button
+	        android:id="@+id/modifyButton"
+	        android:layout_width="120dip"
+	        android:layout_height="60dip"
+	        android:layout_alignBaseline="@+id/printButton"
+	        android:layout_alignBottom="@+id/printButton"
+	        android:layout_alignParentRight="true"		    
+		    android:background="@drawable/graybutton"
+           	style="@style/ButtonText2"
+	        android:layout_marginRight="164dp"
+	        android:text="@string/modify" />
+
+	</RelativeLayout>
+    
+</LinearLayout>

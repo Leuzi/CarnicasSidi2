@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondofactura"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/introabove"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="4.4"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="300dip"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/getData"
+            style="@style/ButtonText2"
+            android:layout_width="150dip"
+            android:layout_height="80dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="700dip"
+            android:layout_toRightOf="@id/backButton"
+            android:background="@drawable/graybutton"
+            android:text="@string/getData"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/backButton"
+            style="@style/ButtonText2"
+            android:layout_width="150dip"
+            android:layout_height="80dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="55dp"
+            android:background="@drawable/graybutton"
+            android:text="@string/back" />
+
+        <Button
+            android:id="@+id/selectButton"
+            style="@style/ButtonText2"
+            android:layout_width="150dip"
+            android:layout_height="80dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="374dp"
+            android:background="@drawable/graybutton"
+            android:text="@string/selectclient" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.01"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/introcentral"
+            android:layout_width="841dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="59dip"
+            android:layout_marginRight="30dip"
+            android:layout_marginTop="14dip"
+            android:orientation="vertical" >
+
+            <TableRow
+                android:id="@+id/headtable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/headcell" >
+
+                <TextView
+                    android:layout_width="280dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dip"
+                    android:text="@string/product"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="92dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quantity"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="75dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/priceperunit"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/discount"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action"
+                    android:textColor="#000000" />
+            </TableRow>
+
+            <ScrollView
+                android:layout_width="850dip"
+                android:layout_height="fill_parent" >
+
+                <TableLayout
+                    android:id="@+id/tableBill"
+                    android:layout_width="850dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="12dip"
+                    android:layout_marginTop="7dip"
+                    android:orientation="horizontal" >
+                </TableLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rightcentral"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/image"
+                android:src="@drawable/logo" />
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="300dip"
+                android:layout_height="280dip"
+                android:focusable="false" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/state"
+                android:textColor="#FFFFFF" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paid"
+                android:textOff="@string/notPaid"
+                android:textOn="@string/paid" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/observations"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/editObs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textMultiLine" >
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/introbelow"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="4.4"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/finalizeButton"
+            style="@style/ButtonText2"
+            android:layout_width="150dip"
+            android:layout_height="80dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="59dp"
+            android:background="@drawable/graybutton"
+            android:focusableInTouchMode="true"
+            android:text="@string/finalize" />
+
+        <Button
+            android:id="@+id/printButton"
+            style="@style/ButtonText2"
+            android:layout_width="150dip"
+            android:layout_height="80dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="336dp"
+            android:layout_toRightOf="@+id/finalizeButton"
+            android:background="@drawable/graybutton"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="@string/print" />
+
+    </RelativeLayout>
+
+</LinearLayout>

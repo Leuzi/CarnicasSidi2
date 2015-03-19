@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Carnicas Sidi</string>
+	<string name="license">Ramón Izuel Rios para Carnicas SIDI 2014</string>
+	<string name="backup">Copia de seguridad</string>
+	<string name="clients">Clientes</string>
+	<string name="products">Productos</string>
+	<string name="diarybill">Factura Diaria</string>
+	<string name="anualbill">Factura Mensual\nAnual</string>
+	<string name="name">Nombre</string>
+	<string name="detail">Detalle</string>
+	<string name="address">Dirección</string>
+	<string name="cif">DNI/CIF</string>
+	<string name="city">Ciudad</string>
+	<string name="cp">C.P</string>
+	<string name="country">País</string>
+	<string name="accept">Aceptar</string>
+	<string name="erase">Borrar</string>
+	<string name="back">Volver</string>
+	<string name="prize">Precio</string>
+	<string name="units">Marcar si se mide en unidades</string>
+	<string name="finalize">Finalizar</string>
+	<string name="selectclient">Seleccionar\nCliente</string>
+	<string name="waybill">Albarán</string>
+	<string name="product">Producto</string>
+	<string name="quantity">Cantidad</string>
+	<string name="priceperunit">Precio Unit</string>
+	<string name="discount">Descuento</string>
+	<string name="total">Total</string>
+	<string name="action">Acción</string>
+	<string name="newProduct">Nuevo Producto</string>
+	<string name="newClient">Nuevo Cliente</string>
+	<string name="newBill">Nueva Factura</string>
+	<string name="notModifiedClient">Cliente no modificado</string>
+	<string name="modifiedClient">Cliente modificado</string>
+	<string name="notModifiedProduct">Producto no modificado</string>
+	<string name="modifiedProduct">Producto modificado</string>
+	<string name="since">Desde</string>
+	<string name="until">Hasta</string>
+	<string name="monthSelection">Seleccione los meses</string>
+	<string name="onlyPaid">Sólo pagadas</string>
+	<string name="onlyNotPaid">Sólo no pagadas</string>
+	<string name="allBills">Todas las facturas</string>
+	<string name="print">Imprimir</string>
+	<string name="chooseType">Eliga tipo de factura</string>
+	<string name="client">Cliente</string>
+	<string name="billNumber">NºFactura</string>
+	<string name="date">Fecha</string>
+	<string name="review">Observaciones</string>
+	<string name="billList">Listado de Facturas</string>
+	<string name="modify">Modificar</string>
+	<string name="printing">Imprimiendo</string>
+	<string name="selectBill">Seleccione una factura</string>
+	<string name="diarySelection">Selección diaria</string>
+	<string name="billForm">Formulario Factura</string>
+	<string name="anualForm">Facturas anuales</string>
+	<string name="modifyPricesClients">Modificar \n Precios</string>
+	<string name="restorePrizes">Restaurar Precio</string>
+	<string name="modifyPrizes">Modificar \n Precios</string>
+	<string name="finalizeBill">Finalizar Factura</string>
+	<string name="createdClient">Cliente Creado</string>
+	<string name="kilos">Marcar si se mide en kilos  </string>
+	<string name="createdProduct">Producto Creado</string>
+	<string name="idFactura">Numero de Factura</string>
+	<string name="numberItems">Numero de elementos</string>
+	<string name="observations">Observaciones</string>
+	<string name="selectClient">Seleccione Cliente</string>
+	<string name="save">Guardar</string>
+	<string name="eraseBill">Borrar \n Factura</string>
+	<string name="cancel">Cancelar</string>
+	<string name="erasedProduct">Producto Borrado</string>
+	<string name="erasedClient">Cliente Borrado</string>
+	<string name="billCreated">Nueva factura creada</string>
+	<string name="billModified">Factura modificada</string>
+	<string name="notCreatedProduct">Producto no creado\nProbablemente haya otro con el mismo nombre</string>
+	<string name="notCreatedClient">Cliente no creado\nProbablemente haya otro con el mismo nombre</string>
+	<string name="image">Imagen</string>
+	<string name="s">00000</string>
+	<string name="state">Estado</string>
+	<string name="paid">Pagado</string>
+	<string name="notPaid">No Pagado</string>
+	<string name="error1Product">Producto no Borrado \nProbablemente esté facturado\nBorre primero todas las facturas con ese producto</string>
+	<string name="error1Client">Cliente no Borrado \nProbablemente tenga facturas\nBorre primero todas las facturas</string>
+	<string name="Sig.Num">Actual</string>
+	<string name="getData">Obtener Datos</string>
+	<string-array name="optionsBillSelection">
+        <item>Todas</item>
+        <item>Sólo No Pagadas</item>
+        <item>Sólo Pagadas</item>
+    </string-array>    	
+    <string-array name="optionsDate">
+        <item>Todas</item>
+        <item>Hoy</item>
+        <item>Ayer</item>
+        <item>Última semana</item>
+        <item>Último mes</item>
+        <item>Tres meses</item>
+        <item>Último año</item>
+    </string-array>
+    <string-array name="optionsModeSelection">
+        <item>Individuales</item>
+        <item>Agrupar Por Meses</item>
+    </string-array>
+    <string name="listprize">Lista de Precios</string>
+    <string name="Todos">Todos</string>
+    <string name="Ultimos">Últimos</string>
+    <string name="MasVendidos">Más Vendidos</string>
+    <string name="Mejores">Mejores</string>
+    <string name="daybill">Fecha factura</string>
+
+</resources>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondocreacion" >
+    
+<RelativeLayout
+	    android:id="@+id/introabove"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:layout_weight="4.4">
+
+    	<Button
+    	    
+		    android:id="@+id/eraseButton"
+		    android:layout_width="120dip"
+		    android:layout_height="70dip"
+    	    android:layout_alignParentRight="true"
+    	    android:layout_centerVertical="true"
+    	    android:layout_marginRight="161dp"    	    		    
+		    android:background="@drawable/graybutton"
+           	style="@style/ButtonText2"
+    	    android:text="@string/erase" />
+    	
+    	<Button
+    	    android:id="@+id/modifyButton"
+    	    style="@style/ButtonText2"
+    	    android:layout_width="120dip"
+    	    android:layout_height="70dip"
+    	    android:layout_alignParentLeft="true"
+    	    android:layout_alignTop="@+id/eraseButton"
+    	    android:layout_marginLeft="158dp"
+    	    android:background="@drawable/graybutton"
+    	    android:text="@string/modifyPricesClients" />
+
+    	<Button
+    	    android:id="@+id/listButton"
+    	    style="@style/ButtonText2"
+    	    android:layout_width="120dip"
+    	    android:layout_height="70dip"
+    	    android:layout_centerHorizontal="true"
+    	    android:layout_centerVertical="true"
+    	    android:background="@drawable/graybutton"
+    	    android:text="@string/listprize" />
+    
+	</RelativeLayout>
+	
+	<LinearLayout
+	    android:id="@+id/introcentral"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:layout_weight="1.2"
+	    android:baselineAligned="false">
+	    
+		<LinearLayout
+		    android:id="@+id/letfcentral"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:layout_weight="1.1">	    
+		</LinearLayout>
+
+		<RelativeLayout
+		    android:id="@+id/central"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.3"
+		    android:orientation="horizontal"
+		    android:paddingLeft="50dip"
+		    android:paddingRight="50dip"
+		    android:paddingTop="50dip"
+			>
+
+		    <TextView
+		        android:id="@+id/labelName"
+		        style="@style/FormFont"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/editName"
+		        android:text="@string/name"
+		       
+		     />
+		        
+
+		    <EditText
+		        android:id="@id/editName"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/editAddress"
+		        android:inputType="text"
+		        android:imeOptions="flagNoExtractUi"
+		        android:maxLength="24"
+		    />
+		    
+		    <TextView
+		        android:id="@+id/labelDetail"
+		        style="@style/FormFont"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/editDetail"
+		        android:layout_below="@id/labelName"
+		        android:text="@string/detail"
+		    />
+
+		    <EditText
+		        android:id="@id/editDetail"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@id/editName"
+		        android:layout_below="@id/editName"
+		        android:layout_marginTop="14dip"
+		        android:layout_toRightOf="@id/labelDetail"
+		        android:inputType="text"
+		        android:imeOptions="flagNoExtractUi"
+		        android:maxLength="24"
+		    />
+		    
+
+		    <TextView
+		        android:id="@+id/labelAddress"
+		        style="@style/FormFont"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/editAddress"
+		        android:layout_below="@id/labelDetail"
+		        android:text="@string/address"
+		        android:layout_marginRight="14dip"
+		    />
+
+		    <EditText
+		        android:id="@id/editAddress"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/editDetail"
+		        android:layout_marginTop="14dip"
+		        android:layout_toRightOf="@id/labelAddress"
+		        android:inputType="text"
+		        android:imeOptions="flagNoExtractUi"
+		        android:maxLength="24"
+		    />
+		    
+		    <TextView
+		        android:id="@+id/labelCIF"
+		        style="@style/FormFont"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/editCIF"
+		        android:layout_below="@id/labelAddress"
+		        android:text="@string/cif"
+		    />
+
+		    <EditText
+		        android:id="@id/editCIF"
+		        android:layout_width="260dip"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@id/editName"
+		        android:layout_below="@id/editAddress"
+		        android:layout_marginTop="14dip"
+		        android:layout_marginRight="14dip"
+		        android:layout_toRightOf="@id/labelAddress"
+		        android:inputType="text"
+		        android:imeOptions="flagNoExtractUi"
+		        android:maxLength="14"
+		    />
+
+		    <TextView
+		        android:id="@+id/labelCity"
+		        style="@style/FormFont"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/editCIF"
+		        android:layout_toRightOf="@id/editCIF"
+		        android:text="@string/city"		        
+		        android:layout_marginRight="14dip"
+		    />
+
+		    <EditText
+		        android:id="@+id/editCity"
+		        android:layout_width="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="14dip"
+		        android:layout_toRightOf="@id/labelCity"
+		        android:layout_below="@id/editAddress"
+		        android:inputType="text"
+		        android:imeOptions="flagNoExtractUi"
+		        android:maxLength="11"
+		    />
+		    
+
+		    <TextView
+		        android:id="@+id/labelCP"
+		        style="@style/FormFont"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/editCP"
+		        android:layout_below="@id/labelCIF"
+		        android:text="@string/cp"
+		    />
+
+		    <EditText
+		        android:id="@id/editCP"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@id/editName"
+		        android:layout_below="@id/editCIF"
+		        android:layout_marginTop="14dip"
+		        android:layout_toRightOf="@id/labelCP"
+		        android:layout_alignRight="@id/editCIF"
+		        android:inputType="number"
+		        android:imeOptions="flagNoExtractUi"
+		        android:maxLength="5"
+		        android:hint="@string/s"
+		    />
+		    
+
+		    <TextView
+		        android:id="@+id/labelCountry"
+		        style="@style/FormFont"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@id/editCP"
+		        android:layout_toRightOf="@id/editCP"
+		        android:layout_alignLeft="@id/labelCity"
+		        android:text="@string/country"
+		    />
+
+		    <EditText
+		        android:id="@+id/editCountry"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/editCity"
+		        android:layout_marginTop="14dip"
+		        android:layout_toRightOf="@+id/labelCountry"
+		        android:layout_alignLeft="@id/editCity"		        
+		        android:layout_alignParentRight="true"
+		        android:inputType="text"
+		        android:imeOptions="flagNoExtractUi"
+		        android:maxLength="15"
+		    />
+
+		    <Button
+		        
+		        android:id="@+id/backButton"
+		        android:layout_width="200dip"
+		        android:layout_height="100dip"
+		        android:layout_alignParentBottom="true"
+		        android:layout_marginBottom="14dip"
+		        android:text="@string/back"
+			    android:background="@drawable/graybutton"
+	           	style="@style/ButtonText2"
+		        android:textSize="22sp"
+		    />
+
+		    <Button
+		        android:id="@+id/acceptButton"
+		        android:layout_width="200dip"
+		        android:layout_height="100dip"
+		        android:layout_alignParentBottom="true"
+		        android:layout_marginBottom="14dip"
+		        android:layout_alignParentRight="true"
+		        android:text="@string/accept"		        		    
+			    android:background="@drawable/graybutton"
+	           	style="@style/ButtonText2"
+		        android:textSize="22sp"
+		    />
+
+		    <TextView
+		        
+		        android:id="@+id/labelNext"
+		        style="@style/FormFont"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/labelCountry"
+		        android:layout_below="@+id/editCountry"
+		        android:layout_marginTop="25dp"
+		        android:text="@string/Sig.Num"/>
+
+		    <EditText
+		        android:id="@+id/editNext"
+		        android:layout_width="160dip"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/labelNext"
+		        android:layout_alignBottom="@+id/labelNext"
+		        android:layout_alignLeft="@+id/editCountry"
+		        android:layout_alignRight="@+id/editCountry"
+		        android:inputType="number"
+		        android:ems="10"
+		        android:imeOptions="flagNoExtractUi">
+
+		        <requestFocus />
+		    </EditText>
+
+		</RelativeLayout>
+
+		<LinearLayout
+		    android:id="@+id/rightcentral"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:layout_weight="1.1">	    
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/introbelow"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:layout_weight="4.4">
+	</LinearLayout>    
+    
+</LinearLayout>

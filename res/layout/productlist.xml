@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondoseleccion" >
+
+	<LinearLayout
+	    android:id="@+id/introabove"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:layout_weight="4.4">
+
+		<Button
+		    android:id="@+id/TodosButton"
+		    style="@style/ButtonText2"
+		    android:layout_width="150dip"
+		    android:layout_height="fill_parent"
+		    android:layout_marginLeft="159dp"
+		    android:background="@drawable/graybutton"
+		    android:drawableLeft="@drawable/all"
+		    android:text="@string/Todos" />
+
+		<Button
+		    android:id="@+id/UltimosButton"
+		    style="@style/ButtonText2"
+		    android:layout_width="150dip"
+		    android:layout_height="fill_parent"
+		    android:drawableLeft="@drawable/last"
+		    android:layout_marginLeft="0dp"
+		    android:background="@drawable/graybutton"
+		    android:text="@string/Ultimos" />
+
+		<Button
+		    android:id="@+id/MasVendidosButton"
+		    style="@style/ButtonText2"
+		    android:layout_width="150dip"
+		    android:layout_height="fill_parent"
+		    android:drawableLeft="@drawable/best"
+		    android:layout_marginLeft="0dp"
+		    android:background="@drawable/graybutton"
+		    android:text="@string/MasVendidos" />
+		
+		<Spinner
+		    android:id="@+id/selectDate"
+		    android:layout_width="201dp"
+		    android:layout_height="49dp"
+		    android:gravity="center"
+		    android:layout_gravity="center"
+		    android:layout_marginLeft="320dip" />
+		
+	
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/introcentral"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:layout_weight="1.2"
+	    android:baselineAligned="false">
+	    
+		<LinearLayout
+		    android:id="@+id/letfcentral"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:layout_weight="1.1">	    
+		</LinearLayout>
+
+        <GridView
+            android:id="@+id/listProducts"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:layout_weight="0.3"
+            android:fastScrollEnabled="true"
+            android:numColumns="3"
+            android:orientation="horizontal"
+            android:scrollingCache="false" >
+</GridView>
+	        			    	    
+		<LinearLayout
+		    android:id="@+id/rightcentral"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:layout_weight="1.1">	    
+		</LinearLayout>
+	</LinearLayout>
+	<RelativeLayout
+	    android:id="@+id/introbelow"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:layout_weight="4.4">
+
+	    <Button
+	        android:id="@+id/backButton"
+	        android:layout_width="150dip"
+	        android:layout_height="80dip"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="159dp"    	    		    
+		    android:background="@drawable/graybutton"
+           	style="@style/ButtonText2"
+	        android:text="@string/back" />
+
+	</RelativeLayout>    
+    
+</LinearLayout>

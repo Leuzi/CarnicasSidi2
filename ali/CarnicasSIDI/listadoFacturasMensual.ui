@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>80</y>
+     <width>581</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>579</width>
+      <height>389</height>
+     </rect>
+    </property>
+    <widget class="QListWidget" name="listClientes">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>581</width>
+       <height>391</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="buttonAtras">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>510</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Atrás</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonImprimir">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>510</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Anual</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>50</y>
+     <width>171</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Listado de Facturas Anual/mensual</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonModificar">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>510</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mensual</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,18 @@
+import gtk
+
+'''
+Created on 02/01/2012
+
+@author: kaos
+'''
+
+class Principal(object):
+    '''
+    classdocs
+    '''
+    def __init__(self):
+        '''
+        Constructor
+        '''
+        self.xml = glade.XML
+        

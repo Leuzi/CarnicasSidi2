@@ -1,0 +1,19 @@
+import gtk
+from gtk import import glade
+'''
+Created on 02/01/2012
+
+@author: kaos
+'''
+
+class Principal(object):
+    '''
+    classdocs
+    '''
+    self.xml = glade.XML
+
+    def __init__(selfparams):
+        '''
+        Constructor
+        '''
+        
