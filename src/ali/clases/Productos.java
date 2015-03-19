@@ -1,7 +1,5 @@
 package ali.clases;
 
-import android.widget.ArrayAdapter;
-
 public class Productos implements Comparable<Productos>{
 
 	private int idProducto;		//Id del producto

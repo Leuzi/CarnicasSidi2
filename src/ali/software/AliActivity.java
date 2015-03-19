@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Calendar;
 
-import ali.clases.DBHandler;
 import ali.clases.Facturas;
 import ali.clases.GlobalStatic;
 import android.app.Activity;

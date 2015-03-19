@@ -227,7 +227,8 @@ public class Clients  extends Activity {
 		list.setOnItemClickListener(new OnItemClickListener() {
 		    public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 		      //Obtener el nombre clickado
-		      Pair<String,String> clientes = (Pair<String,String>) list.getItemAtPosition(position);
+		      @SuppressWarnings("unchecked")
+			  Pair<String,String> clientes = (Pair<String,String>) list.getItemAtPosition(position);
 		      String clientName =clientes.first;
 		      
 		      Resources res = getResources();

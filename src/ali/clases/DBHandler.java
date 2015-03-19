@@ -4,7 +4,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.math.RoundingMode;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -16,9 +15,7 @@ import java.util.Map.Entry;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Pair;
 
@@ -138,33 +135,6 @@ public class DBHandler extends SQLiteOpenHelper {
 	    }
 	 
 	    /**
-	     * Check if the database already exist to avoid re-copying the file each time you open the application.
-	     * @return true if it exists, false if it doesn't
-	     */
-	    private boolean checkDataBase(){
-	 
-	    	SQLiteDatabase checkDB = null;
-	 
-	    	try{
-	    		String myPath = DB_PATH + DB_NAME;
-	    		checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
-	 
-	    	}catch(SQLiteException e){
-	 
-	    		//database does't exist yet.
-	 
-	    	}
-	 
-	    	if(checkDB != null){
-	 
-	    		checkDB.close();
-	 
-	    	}
-	 
-	    	return checkDB != null ? true : false;
-	    }
-	 
-	    /**
 	     * Copies your database from your local assets-folder to the just created empty database in the
 	     * system folder, from where it can be accessed and handled.
 	     * This is done by transfering bytestream.
@@ -208,8 +178,7 @@ public class DBHandler extends SQLiteOpenHelper {
 	public void onUpgrade(SQLiteDatabase db, int arg1, int arg2) {
 		// TODO Auto-generated method stub
 		  db.execSQL("DROP TABLE IF EXISTS clientes ");
-		  db.execSQL("DROP TABLE IF EXISTS productos");
-		  
+		  db.execSQL("DROP TABLE IF EXISTS productos");		  
 		  db.execSQL("DROP TABLE IF EXISTS facturas");
 		  db.execSQL("DROP TABLE IF EXISTS posee");
 		  db.execSQL("DROP TABLE IF EXISTS contiene");
@@ -219,9 +188,7 @@ public class DBHandler extends SQLiteOpenHelper {
 	}
 
 	@Override
-	public void onCreate(SQLiteDatabase db) {		//Ejecuta las setencias
-		// TODO Auto-generated method stub
-		 
+	public void onCreate(SQLiteDatabase db) {		//Ejecuta las setencias		 
 		 db.execSQL(ForeignKeysON);
 		 db.execSQL(TableClients);
 		 db.execSQL(TableProducts);
@@ -232,14 +199,10 @@ public class DBHandler extends SQLiteOpenHelper {
 	}
 
 	public ArrayList<Productos> getProducts() {				//Devuelve todos los productos disponibles
-		// TODO Auto-generated method stub
-		SQLiteDatabase db = this.getWritableDatabase();
-		
-		String sql = "SELECT * FROM productos";
-		
+		SQLiteDatabase db = this.getWritableDatabase();		
+		String sql = "SELECT * FROM productos";		
 		String str[] =null;
-		Cursor cursor = db.rawQuery(sql,str);
-		
+		Cursor cursor = db.rawQuery(sql,str);		
 		ArrayList<Productos> list = new ArrayList<Productos>();
 		
 		//Nos aseguramos de que existe al menos un registro
@@ -259,10 +222,9 @@ public class DBHandler extends SQLiteOpenHelper {
 	       		Productos producto = new Productos(idProductos,nombre,detalle,precio,unidades);
 	       		//Lo añadimos a la lista global con los productos
 	       		list.add(producto);
-       		  
+	       		
 			}while(cursor.moveToNext());//Mientras que queden registros
-		}
-		
+		}		
 		
 		db.close();
 		return list;
@@ -302,7 +264,6 @@ public class DBHandler extends SQLiteOpenHelper {
 		return names;
 	}
 	public ArrayList<Pair<String,String>> getBestProducts(java.util.Date inicio,java.util.Date fin) {//Devuelve los productos mas vendidos
-		// TODO Auto-generated method stub
 		SimpleDateFormat iso8601Format = new SimpleDateFormat(
 	            "yyyy-MM-dd HH:mm:ss");
 		ArrayList<Pair<String,String>> names = new ArrayList<Pair<String,String>>();
@@ -338,7 +299,6 @@ public class DBHandler extends SQLiteOpenHelper {
 	}
 	
 	public ArrayList<Pair<String,String>> getLastClients() {	//Devuelve los últimos clientes asociados a productos
-		// TODO Auto-generated method stub
 		
 		ArrayList<Pair<String,String>> names = new ArrayList<Pair<String,String>>();
 		SQLiteDatabase db = this.getReadableDatabase();		
@@ -468,10 +428,7 @@ public class DBHandler extends SQLiteOpenHelper {
 		Map<String, Object> precios = new HashMap<String, Object>();
 		
 		if(cursor.moveToFirst()){
-			int idProducto = cursor.getInt(0);
-			double precio = cursor.getDouble(1);
-			String[] args2={String.valueOf(idProducto)};
-			
+			double precio = cursor.getDouble(1);			
 			String nombre = cursor.getString(2);			
 			precios.put(nombre, precio);			
 		}
@@ -542,13 +499,10 @@ public class DBHandler extends SQLiteOpenHelper {
 		if(cursor.moveToFirst()){
 			do{
 				//Obtenemos la información
-				int idProducto = cursor.getInt(0);
-				String args2[]={String.valueOf(idProducto)};
 				String nombreProducto = cursor.getString(4);
 				double cantidad = cursor.getDouble(1);
 				double precio = cursor.getDouble(2);
-				double descuento = cursor.getDouble(3);
-	
+				double descuento = cursor.getDouble(3);	
 	
 				//Creamos la linea
 				LineaFactura linea = new LineaFactura(i,nombreProducto,cantidad,precio,descuento);
@@ -569,8 +523,7 @@ public class DBHandler extends SQLiteOpenHelper {
 		//Obtenemos la base de datos con la que podamos escribir
 		SQLiteDatabase db = this.getWritableDatabase();
 		
-		//Creamos el contenedor de valores y los almacenamos ahí
-		
+		//Creamos el contenedor de valores y los almacenamos ahí		
 		ContentValues c = new ContentValues();
 		c.put("nombre", name);
 		c.put("detalle",detail);

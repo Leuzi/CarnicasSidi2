@@ -1,6 +1,5 @@
 package ali.software;
 
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
@@ -9,11 +8,9 @@ import ali.clases.DBHandler;
 import ali.clases.GlobalStatic;
 import ali.clases.LineaFactura;
 import android.app.Activity;
-import android.text.AndroidCharacter;
 import android.util.Pair;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,7 +19,6 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 import ali.software.ItemAdapter;
@@ -240,6 +236,7 @@ public class Products extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 				// TODO Auto-generated method stub
+				@SuppressWarnings("unchecked")
 				Pair<String,String> par = (Pair<String,String>) productList.getItemAtPosition(position);
 				String selectedProduct = par.first;
 				
