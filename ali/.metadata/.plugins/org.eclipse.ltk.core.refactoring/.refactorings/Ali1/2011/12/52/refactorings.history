@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Ali1/src/cliente.py&apos; to &apos;Cliente.py&apos;" description="Rename resource &apos;cliente.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cliente.py" name="Cliente.py" stamp="1325242748933" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Ali1/src/Cliente.py&apos; to &apos;Clientes.py&apos;" description="Rename resource &apos;Cliente.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Cliente.py" name="Clientes.py" stamp="1325344091045" updateReferences="true"/>
-</session>

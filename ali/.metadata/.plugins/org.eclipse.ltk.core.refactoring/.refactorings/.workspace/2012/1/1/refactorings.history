@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Ali1/src/principal.py&apos;" deleteContents="false" description="Delete resource &apos;Ali1/src/principal.py&apos;" element1="/Ali1/src/principal.py" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1325498155736"/>&#x0A;<refactoring comment="Delete resource &apos;Ali1/principal.py&apos;" deleteContents="false" description="Delete resource &apos;Ali1/principal.py&apos;" element1="/Ali1/principal.py" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1325503780606"/>
-</session>
