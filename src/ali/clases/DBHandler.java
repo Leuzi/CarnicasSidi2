@@ -26,13 +26,13 @@ public class DBHandler extends SQLiteOpenHelper {
 	 //The Android's default system path of your application database.
     private static String DB_PATH = "/data/data/ali.software/databases/";
  
-    private static String DB_NAME = "DBAli4";
+    private static String DB_NAME = "DBAli5";
  
     private SQLiteDatabase myDataBase; 
     private Context contexto;
 
 	public DBHandler(Context context) {
-		super(context, "DBAli4", null, 9);			//Abre/crea la base de dato
+		super(context, DB_NAME, null, 9);			//Abre/crea la base de dato
 		// TODO Auto-generated constructor stub
 		contexto = context;
 	}
@@ -428,10 +428,12 @@ public class DBHandler extends SQLiteOpenHelper {
 		Map<String, Object> precios = new HashMap<String, Object>();
 		
 		if(cursor.moveToFirst()){
-			double precio = cursor.getDouble(1);			
-			String nombre = cursor.getString(2);			
-			precios.put(nombre, precio);			
-		}
+			do{
+				double precio = cursor.getDouble(1);			
+				String nombre = cursor.getString(2);			
+				precios.put(nombre, precio);
+			}while(cursor.moveToNext());
+		}	
 		cursor.close();
 		return precios;
 	}

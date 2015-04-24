@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Calendar;
 
+import ali.clases.DBHandler;
 import ali.clases.Facturas;
 import ali.clases.GlobalStatic;
 import android.app.Activity;
@@ -134,19 +135,16 @@ public class AliActivity extends Activity {
 				//Crear Dump de la base de datos y almacenarlo/////////////////////////////////////////
 				GlobalStatic data = (GlobalStatic) getApplication();
 				try {
-//					DBHandler db = new DBHandler(getApplicationContext());
-//					db.createDataBase();
-					data.createBackup();
+				DBHandler db = new DBHandler(getApplicationContext());
+					db.createDataBase();
+//					data.createBackup();
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				} 
 				
 				String text ="Base de datos guardada";
 				Toast msg = Toast.makeText(getBaseContext(),text, Toast.LENGTH_LONG);

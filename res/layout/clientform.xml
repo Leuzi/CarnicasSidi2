@@ -23,15 +23,14 @@
 		    android:background="@drawable/graybutton"
            	style="@style/ButtonText2"
     	    android:text="@string/erase" />
-    	
+
     	<Button
     	    android:id="@+id/modifyButton"
     	    style="@style/ButtonText2"
     	    android:layout_width="120dip"
     	    android:layout_height="70dip"
-    	    android:layout_alignParentLeft="true"
-    	    android:layout_alignTop="@+id/eraseButton"
-    	    android:layout_marginLeft="158dp"
+    	    android:layout_alignParentBottom="true"
+    	    android:layout_toLeftOf="@+id/listButton"
     	    android:background="@drawable/graybutton"
     	    android:text="@string/modifyPricesClients" />
 
@@ -40,8 +39,9 @@
     	    style="@style/ButtonText2"
     	    android:layout_width="120dip"
     	    android:layout_height="70dip"
-    	    android:layout_centerHorizontal="true"
-    	    android:layout_centerVertical="true"
+    	    android:layout_alignParentBottom="true"
+    	    android:layout_marginRight="50dp"
+    	    android:layout_toLeftOf="@+id/eraseButton"
     	    android:background="@drawable/graybutton"
     	    android:text="@string/listprize" />
     
